@@ -1,0 +1,81 @@
+.todo-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  text-align: left;
+  color: #004646;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.input-wrapper {
+  position: relative;
+  flex: 1;
+}
+
+.select-category {
+  flex: 1;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-repeat: no-repeat;
+  background-position: right 10px center; 
+}
+
+.todo-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 88%; 
+  padding-right: 50px;
+}
+
+.add-button {
+  position: absolute; 
+  top: 50%; 
+  right: 10px; 
+  transform: translateY(-50%); 
+  padding: 10px;
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+  border: none;
+  width: 40px; 
+  height: 40px; 
+  cursor: pointer;
+  font-size: 20px;
+}
+
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/* Estilo responsive */
+@media (max-width: 600px) {
+  .todo-container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .input-container {
+    flex-direction: column;
+  }
+
+  .add-button {
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,13 @@
+<div class="todo-list-container">
+  <div class="title">
+    <h2>All</h2>
+  </div>
+  
+  <ul>
+    <li *ngFor="let todo of todos" class="todo-item">
+      <button (click)="checkTodo(todo._id, todo.completed)" [ngClass]="{ 'active': todo.completed }" class="check-button"></button>
+      <span>{{ todo.text }}</span>
+      <button (click)="deleteTodo(todo._id)" class="delete-button">X</button>
+    </li>
+  </ul>
+</div>
