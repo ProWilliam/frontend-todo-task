@@ -1,27 +1,61 @@
-# FrontendToDoList
+# Todo Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.0.
+  
+This project is a task management application (To-Do List) that allows users to create, view and manage their tasks in a simple way. The application is developed with Angular and uses services for authentication and task management.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Characteristics
 
-## Code scaffolding
+- Registration of new users.
+- Login for existing users.
+- Creation and deletion of tasks.
+- Filtering tasks by category.
+- Responsive and easy-to-use design.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## Technologies Used
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- **Angular**: Framework to build the user interface.
+- **RxJS**: For handling asynchronous operations.
+- **TypeScript**: For better structuring and typing in development.
+- **Karma and Jasmine**: For unit tests.
+  
 
-## Running unit tests
+## Install
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1.  Clone this repository:
 
-## Running end-to-end tests
+2.  Install the dependencies:
+```
+npm install
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+3. Start the application: 
+```
+ng serve
+```
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+4. Open your browser and access `http://localhost:4200/`.
+
+
+## Project Structure
+
+- `src/`: Contains all the source code of the application.
+    - `app/`: Main folder where the application logic is located.
+        - `components/`: Contains the application components (such as `TodoComponent`, `LoginComponent`, etc.).
+        - `services/`: Services for task management and authentication.
+        - `models/`: Data models used in the application.
+        - `app.component.ts`: Root component of the application.
+        - `app.module.ts`: Main module of the application.
+    - `assets/`: Static files such as images and styles.
+
+
+## Test
+
+The project includes unit tests that ensure the correct functioning of the components and services.
+To run the tests, use:
+
+```
+ng test 
+```
