@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
-
 import { HeaderComponent } from '../header/header/header.component';
 import { TodoListComponent } from '../todo-list/todo-list/todo-list.component';
 import { TodoService } from '../../services/todo/todo.service';
@@ -30,16 +29,20 @@ export class TodoComponent {
 
   constructor(private todoService: TodoService) {}
   addTodo() {
-    this.todoService.createTodo(this.newTodoTitle, this.nextId).subscribe({
-      next: (response) => {
-        console.log(response);
-        this.todos = response; 
-        this.newTodoTitle = '';
-      },
-      error: (error) => {
-        console.error('Error al cargar las tareas:', error);
-      },
-    });
+    if(this.newTodoTitle != ''){
+      this.todoService.createTodo(this.newTodoTitle, this.nextId).subscribe({
+        next: (response) => {
+          console.log(response);
+          this.todos = response; 
+          this.newTodoTitle = '';
+        },
+        error: (error) => {
+          console.error('Error al cargar las tareas:', error);
+        },
+      });
+    }else {
+      alert("you don't have notes writing")
+    }
   }
 
 }

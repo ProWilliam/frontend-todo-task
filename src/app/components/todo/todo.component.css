@@ -26,13 +26,17 @@ h1 {
 }
 
 .select-category {
+  appearance: none;
   flex: 1;
+  width: 100%;
   padding: 10px;
   margin-right: 10px;
   border: 1px solid #ccc;
+  color: gray;
   border-radius: 4px;
   background-repeat: no-repeat;
   background-position: right 10px center; 
+  background-image: url('../../../assets/icon/arrowDown.svg');
 }
 
 .todo-input {
@@ -50,7 +54,7 @@ h1 {
   transform: translateY(-50%); 
   padding: 10px;
   background-color: transparent;
-  color: rgb(0, 0, 0);
+  color: gray;
   border: none;
   width: 40px; 
   height: 40px; 
@@ -64,18 +68,26 @@ h1 {
   color: gray;
 }
 
-/* Estilo responsive */
 @media (max-width: 600px) {
   .todo-container {
-    width: 100%;
     padding: 10px;
   }
 
-  .input-container {
+  .section-create {
+    width: 100%;
+    display: flex;
     flex-direction: column;
   }
 
-  .add-button {
-    margin-top: 10px;
+  .select-category{  
+    width: 100%;
   }
+
+  .todo-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 92%; 
+  }
+
 }

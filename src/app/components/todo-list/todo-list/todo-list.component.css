@@ -2,7 +2,7 @@
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 10px;
 }
 
 h2 {
@@ -61,4 +61,17 @@ ul {
 
 .delete-button:hover {
   background-color: darkred;
+}
+
+@media (max-width: 600px) {
+  .todo-list-container {
+    max-width: 400px;
+    padding-right: 20px;
+  }
+
+  .todo-item span {
+    display: flex;
+    color: #004646;
+    background-color: white;
+  }
 }

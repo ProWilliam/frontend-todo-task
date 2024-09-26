@@ -3,7 +3,7 @@
     <h2>All</h2>
   </div>
   
-  <ul>
+  <ul class="list-items">
     <li *ngFor="let todo of todos" class="todo-item">
       <button (click)="checkTodo(todo._id, todo.completed)" [ngClass]="{ 'active': todo.completed }" class="check-button"></button>
       <span>{{ todo.text }}</span>
