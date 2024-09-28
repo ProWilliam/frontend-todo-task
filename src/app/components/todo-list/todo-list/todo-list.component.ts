@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TodoService } from '../../../services/todo/todo.service';
 import { GlobalStateService } from '../../../services/globalState/global-state.service';
+import { environment } from '../../../../environments/environments';
 
 @Component({
   selector: 'app-todo-list',
@@ -12,11 +13,18 @@ import { GlobalStateService } from '../../../services/globalState/global-state.s
 })
 export class TodoListComponent implements OnInit {
 
+  private websocket: string = environment.conectionWebSocket; 
+
   todos: any[] = [];
 
   constructor(private todoService: TodoService, private globalState: GlobalStateService) {}
 
   ngOnInit() {
+
+    const token = globalThis.localStorage.getItem('token');
+    
+    if(token) this.globalState.connectWebSocket(this.websocket, token);
+
     this.globalState.todos$.subscribe(todos => {
       this.todos = todos;
     });
