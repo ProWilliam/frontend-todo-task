@@ -3,5 +3,6 @@ export const environment = {
   apiUrl: 'http://192.168.1.7:5000/api/',
   register: 'auth/register',
   login: 'auth/login',
-  todo: 'todos/'
+  todo: 'todos/',
+  conectionWebSocket: 'ws://localhost:5000'
 };
