@@ -1,7 +1,7 @@
 # Todo Application
 
   
-This project is a task management application (To-Do List) that allows users to create, view and manage their tasks in a simple way. The application is developed with Angular and uses services for authentication and task management.
+This project is a task management application (To-Do List) that allows users to create, view, and manage their tasks. The application is developed with **Angular**, using services for authentication, task management, and real-time updates through **Socket.IO**.
 
 
 ## Characteristics
@@ -11,6 +11,8 @@ This project is a task management application (To-Do List) that allows users to 
 - Creation and deletion of tasks.
 - Filtering tasks by category.
 - Responsive and easy-to-use design.
+- **Socket.IO**: For real-time communication and WebSocket support.
+- **Real-time task updates** using WebSocket connections with **Socket.IO**.
 
 
 ## Technologies Used
@@ -32,11 +34,34 @@ npm install
 
 3. Start the application: 
 ```
-ng serve
+npm start
 ```
 
 
 4. Open your browser and access `http://localhost:4200/`.
+
+## WebSocket Setup with Socket.IO
+The project uses Socket.IO for WebSocket communication to support real-time updates. When a user creates, updates, or deletes a task, these changes are broadcast to all connected clients using Socket.IO.
+
+## Screenshots
+
+### Web Interface
+Here’s how the interface looks on a web browser:
+
+#### Login
+<img src="https://raw.githubusercontent.com/ProWilliam/frontend-todo-task/refs/heads/main/src/assets/screenshots/Login-Web.jpg" alt="Login view" > 
+
+#### Register
+<img src="https://raw.githubusercontent.com/ProWilliam/frontend-todo-task/refs/heads/main/src/assets/screenshots/Register-Web.jpg" alt="Register view" > 
+
+#### Dasboard
+<img src="https://raw.githubusercontent.com/ProWilliam/frontend-todo-task/refs/heads/main/src/assets/screenshots/Dasboard-Web.jpg" alt="Dasboard view" > 
+
+
+### Mobile Interface
+Here’s how the interface looks on a mobile device:
+
+<img src="https://raw.githubusercontent.com/ProWilliam/frontend-todo-task/refs/heads/main/src/assets/screenshots/Login-Mobile.jpg" alt="Login view mobile" width="222" height="480"> <img src="https://raw.githubusercontent.com/ProWilliam/frontend-todo-task/refs/heads/main/src/assets/screenshots/Register-Mobile.jpg" alt="Register view mobile" width="222" height="480"> <img src="https://raw.githubusercontent.com/ProWilliam/frontend-todo-task/refs/heads/main/src/assets/screenshots/Dasboard-Mobile.jpg" alt="Dasboard view mobile" width="222" height="480">
 
 
 ## Project Structure
@@ -57,5 +82,5 @@ The project includes unit tests that ensure the correct functioning of the compo
 To run the tests, use:
 
 ```
-ng test 
+npm run test
 ```
